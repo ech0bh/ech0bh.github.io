@@ -127,3 +127,11 @@ POST /reset
 `/?q=1 or 1=1`
 
 `/?q='or''='`
+
+## CORS
+
+```python
+if isBlocked("evil.com"):
+  try("target.network")
+  try("target.computer")
+```
