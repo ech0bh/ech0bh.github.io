@@ -156,3 +156,17 @@ wget https://target/app.js
 js-beautify app.js > pretty.js
 grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
 ```
+
+## Rate limit bypass
+
+```
+X-Originating-IP: IP
+X-Forwarded-For: IP
+X-Remote-IP: IP
+X-Remote-Addr: IP
+X-Client-IP: IP
+X-Host: IP
+X-Forwared-Host: IP
+```
+
+**Increment last octate if blocked**
