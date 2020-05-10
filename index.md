@@ -128,6 +128,11 @@ POST /reset
 
 `/?q='or''='`
 
+```
+username: '--' / "--"
+password: '--' / "--"
+```
+
 ## CORS
 
 ```python
