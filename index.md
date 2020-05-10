@@ -145,3 +145,14 @@ if isBlocked("evil.com"):
 
 
 **site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://justpaste.it | site:http://pastebin.com | site:http://jsfiddle.net | site:http://trello.com "$TARGET"**
+
+## File analysis
+
+### Javascript
+
+```
+apt-get install jsbeautifier
+wget https://target/app.js
+js-beautify app.js > pretty.js
+```
+grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
