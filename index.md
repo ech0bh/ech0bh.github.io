@@ -154,5 +154,5 @@ if isBlocked("evil.com"):
 apt-get install jsbeautifier
 wget https://target/app.js
 js-beautify app.js > pretty.js
-```
 grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
+```
