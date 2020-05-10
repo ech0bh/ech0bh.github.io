@@ -170,3 +170,7 @@ X-Forwared-Host: IP
 ```
 
 **Increment last octate if blocked**
+
+## Subdomain list
+
+amass + altdns + dnsprobe + nmap
