@@ -174,3 +174,7 @@ X-Forwared-Host: IP
 ## Subdomain list
 
 amass + altdns + dnsprobe + nmap
+
+## Information disclosure
+
+- Check if email disclosed in response after inviting a user
