@@ -219,3 +219,15 @@ http://127.1
 http://127.000000000000000.001
 http://127.000.000.00000000000000001
 ```
+
+## Account Takeover
+
+UUID, 2FA, any token...
+
+```
+UUID: 0
+UUID: null
+UUID: nil
+UUID: numerical value
+UUID:
+```
