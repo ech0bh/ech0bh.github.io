@@ -226,6 +226,7 @@ UUID, 2FA, any token...
 
 ```
 UUID: 0
+UUID: 0000
 UUID: null
 UUID: nil
 UUID: numerical value
