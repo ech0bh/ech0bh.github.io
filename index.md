@@ -177,7 +177,7 @@ amass + altdns + dnsprobe + nmap
 
 ## Information disclosure
 
-- Check if email disclosed in response after inviting a user
+> Check if email disclosed in response after inviting a user
 
 ## SSRF
 
@@ -232,3 +232,7 @@ UUID: nil
 UUID: numerical value
 UUID:
 ```
+
+## Bad Practice
+
+> Check if email links are in HTTP
