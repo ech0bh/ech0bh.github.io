@@ -238,3 +238,4 @@ UUID:
 ## Bad Practice
 
 - Check if email links are in HTTP
+- Check if old password is asked when changing password
