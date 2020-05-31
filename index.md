@@ -177,7 +177,9 @@ amass + altdns + dnsprobe + nmap
 
 ## Information disclosure
 
-> Check if email disclosed in response after inviting a user
+- Check if email disclosed in response after inviting a user
+- Check reverse search in API
+> GET /api/account?email=X
 
 ## SSRF
 
@@ -235,4 +237,4 @@ UUID:
 
 ## Bad Practice
 
-> Check if email links are in HTTP
+- Check if email links are in HTTP
