@@ -17,6 +17,7 @@
 ## Password Reset
 
 ### Parameter payloads
+
 | Payload | Description |
 |----------|-------------|
 |email=victim@xyz.tld&email=hacker@xyz.tld|double parameter|
@@ -29,6 +30,7 @@
 |{"email":["victim@tld.xyz","hacker@tld.xyz"]}|json multiple email table|
 
 ### Related other cases
+
 | Technique | Goal |
 |----------|-------------|
 |reset token modification|account takeover|
