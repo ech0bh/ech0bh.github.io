@@ -1,7 +1,19 @@
-# Bug Bounty Tips
+# Bounty Hunter Cheatsheet
 ---
 
 ## File Upload
+
+| Filename | Description |
+|----------|-------------|
+|.htaccess|htaccess rules|
+|file.svg|svg for xss|
+|file.SVg|case insensitive|
+|file.png.svg|double extension|
+|file.php%00.png|null byte|
+|file.png' or '1'='1|sql injection|
+|../../file.png|directory traversal|
+|file.'svg|invalid extension|
+
 
 `.htaccess`
 
