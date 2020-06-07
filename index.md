@@ -57,11 +57,11 @@
 
 ## CORS
 
-```python
-if isBlocked("evil.com"):
-  try("target.network")
-  try("target.computer")
-```
+| Payload | Description |
+|----------|-------------|
+|evil.com|attacker's fqdn|
+|company.evil|attacker's tld|
+|evil.company.tld|attacker's subdomain|
 
 ## Recon
 
