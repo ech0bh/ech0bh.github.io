@@ -65,8 +65,9 @@
 
 ## Recon
 
-
-`site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://justpaste.it | site:http://pastebin.com | site:http://jsfiddle.net | site:http://trello.com "$TARGET"`
+| Technique | Payload |
+|----------|-------------|
+|google dork|site:http://ideone.com \| site:http://codebeautify.org \| site:http://codeshare.io \| site:http://codepen.io | site:http://repl.it \| site:http://justpaste.it \| site:http://pastebin.com \| site:http://jsfiddle.net | site:http://trello.com "$TARGET"|
 
 ## File analysis
 
