@@ -65,38 +65,30 @@
 
 ## Recon
 
-| Technique | Payload |
+| Description | Payload |
 |----------|-------------|
 |google dork|site:http://ideone.com \| site:http://codebeautify.org \| site:http://codeshare.io \| site:http://codepen.io \| site:http://repl.it \| site:http://justpaste.it \| site:http://pastebin.com \| site:http://jsfiddle.net \| site:http://trello.com "$TARGET"|
 
 ## File analysis
 
-### Javascript
-
-```
-apt-get install jsbeautifier
-wget https://target/app.js
-js-beautify app.js > pretty.js
-grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
-```
+| Description | Payload |
+|----------|-------------|
+|find url in file|grep -Eo "(http\|https)://[a-zA-Z0-9./?=\_-]\*" \| sort -u|
 
 ## Rate limit bypass
 
-```
-X-Originating-IP: IP
-X-Forwarded-For: IP
-X-Remote-IP: IP
-X-Remote-Addr: IP
-X-Client-IP: IP
-X-Host: IP
-X-Forwared-Host: IP
-```
-
-**Increment last octate if blocked**
+| Description | Payload |
+|----------|-------------|
+|header substitution (increment if blocked)|X-Originating-IP: IP<br>X-Forwarded-For: IP<br>X-Remote-IP: IP<br>X-Remote-Addr: IP<br>X-Client-IP: IP<br>X-Host: IP<br>X-Forwared-Host: IP|
 
 ## Subdomain list
 
-amass + altdns + dnsprobe + nmap
+| Tool | Description |
+|----------|-------------|
+|amass|scan for subdomains|
+|altdns|compute wordlist with result for new subdomains|
+|dnsprobe|check if found subdomain is valid|
+|nmap|scan subdomain port|
 
 ## Information disclosure
 
