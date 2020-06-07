@@ -92,9 +92,10 @@
 
 ## Information disclosure
 
-- Check if email disclosed in response after inviting a user
-- Check reverse search in API
-> GET /api/account?email=X
+| Issue | Description |
+|----------|-------------|
+|logic|email disclosed in response after inviting a user|
+|wrong parameter management|reverse search API data disclosure<br>**GET /api/users?email=X**|
 
 ## SSRF
 
