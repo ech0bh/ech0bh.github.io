@@ -38,10 +38,6 @@
 |token guess or bruteforce (timestamp, userid)|account takeover|
 |modify header host domain|host reflected in mail and steal token|
 
-**Check body response for password token**
-
-**Token generation: timestamp? userid? useremail? random?**
-
 ## SQL Injection
 
 `/?q=1`
