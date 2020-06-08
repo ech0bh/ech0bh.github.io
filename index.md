@@ -95,7 +95,7 @@
 | Issue | Description |
 |----------|-------------|
 |logic|email disclosed in response after inviting a user|
-|access control|reverse search API data disclosure<br>**GET /api/users?email=X**|
+|access control|reverse search api known private data<br>**GET /api/users?email=X**|
 
 ## SSRF
 
