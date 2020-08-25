@@ -155,3 +155,7 @@ UUID:
 
 - Check if email links are in HTTP
 - Check if old password is asked when changing password
+
+## Auth bypass
+
+`X-Custom-IP-Authorization: 127.0.0.1`
